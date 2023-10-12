@@ -65,41 +65,41 @@ export const settings: Settings = {
     defaultValue: "dark",
     values: {
       light: "light",
-      dark: "dark"
+      dark: "dark",
     },
-    storage: "codeit-theme"
+    storage: "codeit-theme",
   },
   autorun: {
     defaultValue: "auto",
     values: {
       auto: "auto",
-      manually: "manually"
+      manually: "manually",
     },
-    storage: "codeit-live"
+    storage: "codeit-live",
   },
   layout: {
-    defaultValue: "vertical",
+    defaultValue: "horizontal",
     values: {
       horizontal: "horizontal",
-      vertical: "vertical"
+      vertical: "vertical",
     },
-    storage: "codeit-layout"
+    storage: "codeit-layout",
   },
   indentSize: {
     defaultValue: 2,
     values: {
       twoSpaces: 2,
-      fourSpaces: 4
+      fourSpaces: 4,
     },
-    storage: "codeit-indentSize"
+    storage: "codeit-indentSize",
   },
   indentType: {
     defaultValue: true,
     values: {
       spaces: true,
-      tabs: false
+      tabs: false,
     },
-    storage: "codeit-indentType"
+    storage: "codeit-indentType",
   },
   fontSize: {
     defaultValue: 14,
@@ -107,17 +107,17 @@ export const settings: Settings = {
       small: 12,
       normal: 14,
       large: 18,
-      huge: 22
+      huge: 22,
     },
-    storage: "codeit-fontSize"
+    storage: "codeit-fontSize",
   },
   localization: {
     defaultValue: "en-EN",
     values: {
       ru: "ru-RU",
       en: "en-EN",
-      hi: "hi-HI"
+      hi: "hi-HI",
     },
-    storage: "codeit-localization"
-  }
+    storage: "codeit-localization",
+  },
 };

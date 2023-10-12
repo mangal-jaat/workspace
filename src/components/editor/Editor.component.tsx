@@ -1,7 +1,6 @@
 import Editor, { Monaco, useMonaco } from "@monaco-editor/react";
 import React, { MutableRefObject, useEffect } from "react";
 import { emmetCSS, emmetHTML, emmetJSX } from "emmet-monaco-es";
-
 import { themeDark, themeLight, settings } from "../../constants";
 import { EditorWrapper, EditorHeader, EditorLang } from "./styles/editor.style";
 import { getStorage, parseBooleanString } from "../../helpers";
@@ -30,8 +29,8 @@ export function CodeEditor(props: CodeEditorProps) {
         "editor.background": `${themeDark.background.primary}`,
         "editor.lineHighlightBackground": `${themeDark.editor.line}`,
         "dropdown.background": `${themeDark.background.secondary}`,
-        "editorWidget.background": `${themeDark.background.primary}`
-      }
+        "editorWidget.background": `${themeDark.background.primary}`,
+      },
     });
 
     monaco.editor.defineTheme(settings.theme.values.light, {
@@ -44,8 +43,8 @@ export function CodeEditor(props: CodeEditorProps) {
         "editorLineNumber.foreground": `${themeLight.editor.lineNum}`,
         "editorCursor.foreground": `${themeLight.text.secondary}`,
         "dropdown.background": `${themeLight.background.secondary}`,
-        "editorWidget.background": `${themeLight.background.secondary}`
-      }
+        "editorWidget.background": `${themeLight.background.secondary}`,
+      },
     });
   };
 
@@ -94,34 +93,7 @@ export function CodeEditor(props: CodeEditorProps) {
         onChange={handleChange}
         beforeMount={handleEditorWillMount}
         onMount={handleEditorDidMount}
-        theme={
-          getStorage(settings.theme.storage) === settings.theme.values.light
-            ? settings.theme.values.light
-            : settings.theme.values.dark
-        }
-        options={{
-          minimap: {
-            enabled: false
-          },
-          tabSize:
-            +getStorage(settings.indentSize.storage) ||
-            settings.indentSize.defaultValue,
-          fontSize:
-            +getStorage(settings.fontSize.storage) ||
-            settings.fontSize.defaultValue,
-          insertSpaces: getStorage(settings.indentType.storage)
-            ? parseBooleanString(getStorage(settings.indentType.storage))
-            : settings.indentType.defaultValue,
-          wordWrap: "on",
-          wordWrapColumn: 80,
-          wrappingIndent: "same",
-          detectIndentation: false,
-          formatOnPaste: true,
-          formatOnType: true,
-          fixedOverflowWidgets: true,
-          renderWhitespace: "all",
-          autoIndent: "none"
-        }}
+        theme={"vs-dark"}
       />
     </EditorWrapper>
   );

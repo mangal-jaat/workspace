@@ -19,10 +19,16 @@ export default function App() {
   );
 
   return (
-    <>
-    <GlobalStyle />
+    <ThemeProviderMUI theme={theme}>
+      <ThemeProvider
+        theme={
+          themeMode === settings.theme.values.light ? themeLight : themeDark
+        }
+      >
+        <GlobalStyle />
         <Project />
-    </>
+      </ThemeProvider>
+    </ThemeProviderMUI>
   );
 }
 
