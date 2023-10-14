@@ -10,7 +10,7 @@ import {
   Menu,
   ListItemIcon,
   Box,
-  Typography
+  Typography,
 } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -27,7 +27,7 @@ import {
   ProjectTitle,
   ProjectTitleInput,
   SignIn,
-  Run
+  Run,
 } from "./styles/header.style";
 import { FormSignIn, FormSignUp } from "../forms";
 import { Snackbar } from "../snackbar/Snackbar.component";
@@ -130,8 +130,8 @@ Header.ProjectTitle = function HeaderProjectTitleInput(props: EditProps) {
                 left: 0,
                 padding: "5px",
                 "& svg": {
-                  fontSize: "18px"
-                }
+                  fontSize: "18px",
+                },
               }}
             >
               <Edit />
@@ -148,8 +148,8 @@ Header.ProjectTitle = function HeaderProjectTitleInput(props: EditProps) {
                 padding: "5px",
                 "& svg": {
                   fontSize: "18px",
-                  color: "common.green.primary"
-                }
+                  color: "common.green.primary",
+                },
               }}
             >
               <Check />
@@ -187,8 +187,8 @@ Header.SignIn = function HeaderSignIn() {
         onClose={handleCloseModal}
         sx={{
           "& .MuiPaper-root": {
-            backgroundColor: "background.modal"
-          }
+            backgroundColor: "background.modal",
+          },
         }}
       >
         <DialogContent>
@@ -213,8 +213,8 @@ Header.SignIn = function HeaderSignIn() {
             right: 8,
             top: 15,
             "& svg": {
-              fontSize: "20px"
-            }
+              fontSize: "20px",
+            },
           }}
         >
           <Close />
@@ -289,7 +289,7 @@ Header.ProfileMenu = function HeaderProfileMenu() {
               width: 32,
               height: 32,
               ml: -0.5,
-              mr: 1
+              mr: 1,
             },
             "&:before": {
               content: '""',
@@ -301,9 +301,9 @@ Header.ProfileMenu = function HeaderProfileMenu() {
               height: 10,
               bgcolor: "background.paper",
               transform: "translateY(-50%) rotate(45deg)",
-              zIndex: 0
-            }
-          }
+              zIndex: 0,
+            },
+          },
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { SplitPane } from "react-multi-split-pane";
 
 import { CodeEditor, Output, Container } from "../components";
@@ -6,7 +6,7 @@ import { project, RUN_DELAY, settings } from "../constants";
 import {
   HeaderContainer,
   SidebarContainer,
-  ConsoleContainer
+  ConsoleContainer,
 } from "../containers";
 import { useStorage, useActions, useTypedSelector } from "../hooks";
 
