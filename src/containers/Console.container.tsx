@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { Console } from "../components";
 import { useActions, useTypedSelector } from "../hooks";
-
+ 
 export function ConsoleContainer() {
   const { consoleLogs } = useTypedSelector((store) => store.logs);
   const { resetLogs } = useActions();
