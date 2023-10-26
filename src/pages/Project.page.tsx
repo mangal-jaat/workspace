@@ -1,13 +1,8 @@
 import * as React from "react";
 import { SplitPane } from "react-multi-split-pane";
 
-import { CodeEditor, Output, Container } from "../components";
+import { CodeEditor, Output, Container, HeaderContainer, ConsoleContainer } from "../components";
 import { project, RUN_DELAY, settings } from "../constants";
-import {
-  HeaderContainer,
-  SidebarContainer,
-  ConsoleContainer,
-} from "../containers";
 import { useStorage, useActions, useTypedSelector } from "../hooks";
 
 export function Project() {
@@ -58,7 +53,7 @@ export function Project() {
     <>
       <HeaderContainer srcDoc={srcTemplate} setSrcDoc={setSrcDoc} />
       <Container>
-        <SidebarContainer />
+        {/**<SidebarContainer /> */}
         {layoutType === settings.layout.values.horizontal ? (
           <Container.Inner>
             <SplitPane

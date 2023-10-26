@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import styled from "styled-components/macro";
 import { styled as styledMUI } from "@mui/material/styles";
+import { NoEncryption } from "@mui/icons-material";
 
 export const Container = styled.header`
   display: flex;
@@ -30,7 +31,6 @@ export const Logo = styled.h1`
   text-transform: uppercase;
 
   margin-right: 20px;
-
   span {
     color: ${({ theme }) => theme.primary.main};
   }
@@ -48,7 +48,6 @@ export const ProjectTitle = styled.div`
 
 export const ProjectTitleInput = styled.input`
   font-size: 14px;
-
   width: 100%;
 
   &::-moz-selection {
@@ -60,7 +59,60 @@ export const ProjectTitleInput = styled.input`
   }
 `;
 
-export const SignIn = styledMUI(Button)(({ theme }) => ({
+export const SignIn = styled.button`
+font-size: 14px;
+text-transform: none;
+color: ${({ theme }) => theme.white.primary};;
+background-color: ${({ theme }) => theme.primary.main};
+box-shadow: none;
+height: 25px;
+padding: 4px 10px;
+&:hover{
+  box-shadow: none;
+  background-color: ${({ theme }) => theme.primary.dark};
+}
+&:active{
+  box-shadow: none;
+  background-color: ${({ theme }) => theme.primary.dark};
+}
+`;
+
+export const Run = styled.button`
+font-size: 14px;
+text-transform: none;
+color: ${({ theme }) => theme.white.primary};;
+background-color: ${({ theme }) => theme.common.green.primary};
+box-shadow: none;
+height: 25px;
+padding: 4px 10px;
+margin-right: 4px;
+&:hover{
+  box-shadow: none;
+  background-color: ${({ theme }) => theme.common.green.secondary};
+}
+&:active{
+  box-shadow: none;
+  background-color: ${({ theme }) => theme.common.green.secondary};
+}
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  .MuiFormControl-root {
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+`;
+
+
+/**
+ * export const SignIn = styledMUI(Button)(({ theme }) => ({
+  borderRadius: "0px",
   textTransform: "none",
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.common.white,
@@ -81,9 +133,8 @@ export const SignIn = styledMUI(Button)(({ theme }) => ({
 }));
 
 export const Run = styledMUI(Button)(({ theme }) => ({
-  position: "absolute",
-  left: "50%",
-  transform: "translateX(-50%)",
+  borderRadius: "none",
+  marginRight: "4px",
   textTransform: "none",
   backgroundColor: theme.palette.common.green.primary,
   fontSize: 14,
@@ -102,15 +153,4 @@ export const Run = styledMUI(Button)(({ theme }) => ({
   }
 }));
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-
-  .MuiFormControl-root {
-    margin-bottom: 15px;
-
-    &:last-of-type {
-      margin-bottom: 30px;
-    }
-  }
-`;
+ */

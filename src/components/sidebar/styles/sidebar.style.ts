@@ -6,7 +6,6 @@ import * as TSidebar from "../types/sidebar.type";
 
 export const Container = styled.div`
   display: flex;
-
   background-color: ${({ theme }) => theme.background.secondary};
   border-right: 1px solid ${({ theme }) => theme.myDivider};
 `;
@@ -35,34 +34,9 @@ export const MenuItem = styled.li<TSidebar.ItemProps>`
 
   transition: color 0.1s linear;
 
-  &::before {
-    position: absolute;
-
-    top: 50%;
-    left: -6px;
-
-    transform: translateY(-50%);
-
-    display: block;
-
-    content: "";
-
-    background-color: ${({ theme }) => theme.primary.main};
-
-    width: 2px;
-    height: 0;
-
-    transition: height 0.1s linear;
-
-    ${({ isActive }) => isActive && "height: 170%;"}
-  }
 
   &:hover {
     color: ${({ theme }) => theme.primary.main};
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 25px;
   }
 `;
 
@@ -74,17 +48,19 @@ export const Tab = styled.div<TSidebar.TabProps>`
 
   border-left: 1px solid ${({ theme }) => theme.myDivider};
 
-  ${({ isActive }) => isActive && "display: block;"}
-`;
+  ${({ theme, isActive }) => isActive && `display: block;position: fixed;left: 0 !important;top: 45px;z-index: 5;background-color: ${theme.background.secondary};`}`;
 
 export const TabHeader = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.myDivider};
-
   text-transform: uppercase;
 `;
 
 export const TabHeaderInner = styled.div`
   padding: 15px 10px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const TabList = styled.ul`

@@ -24,7 +24,7 @@ export const Header = styled.div`
 export const Title = styled.p``;
 
 export const Content = styled.div`
-  background-color: ${({ theme }) => theme.background.static};
+  background-color: ${({ theme }) => theme.background.primary};
   height: calc(100% - 25px);
   overflow-y: auto;
 `;

@@ -90,7 +90,7 @@ Header.ProjectTitle = function HeaderProjectTitleInput(props: EditProps) {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTitle(event.target.value.trim());
+    setTitle(event.target.value);
   };
 
   const toggleInputSelect = () => {
@@ -180,8 +180,10 @@ Header.SignIn = function HeaderSignIn() {
   };
 
   return (
-    <>
-      <SignIn onClick={handleOpenModal}>{t("header.signIn")}</SignIn>
+    <> 
+    <Tooltip title="Sign In">
+    <SignIn onClick={handleOpenModal}>{t("header.signIn")}</SignIn>
+    </Tooltip>
       <Dialog
         open={open}
         onClose={handleCloseModal}
@@ -230,6 +232,7 @@ Header.Run = function HeaderRun(props: RunProps) {
   const { t } = useTranslation();
 
   return (
+    <Tooltip title="Run">
     <Run
       onClick={onClick}
       variant="contained"
@@ -237,6 +240,7 @@ Header.Run = function HeaderRun(props: RunProps) {
     >
       {t("header.run")}
     </Run>
+    </Tooltip>
   );
 };
 

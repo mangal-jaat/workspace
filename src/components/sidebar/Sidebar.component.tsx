@@ -184,7 +184,7 @@ Sidebar.ShareLink = function ShareLink() {
         alertText={t("sidebar.share.alert")}
       />
       <Tooltip title={t("tooltips.sidebar.share")}>
-        <Share style={{ fontSize: 30 }} onClick={handleOpenModal} />
+        <Share style={{ fontSize: 25 }} onClick={handleOpenModal} />
       </Tooltip>
       <Dialog
         fullWidth

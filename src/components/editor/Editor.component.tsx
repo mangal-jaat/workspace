@@ -2,15 +2,22 @@ import Editor, { Monaco, useMonaco } from "@monaco-editor/react";
 import React, { MutableRefObject, useEffect } from "react";
 import { emmetCSS, emmetHTML, emmetJSX } from "emmet-monaco-es";
 import { themeDark, themeLight, settings } from "../../constants";
-import { EditorWrapper, EditorHeader, EditorLang } from "./styles/editor.style";
+import { EditorWrapper, EditorHeader, HeaderGroup, EditorLang } from "./styles/editor.style";
 import { getStorage, parseBooleanString } from "../../helpers";
+
+/** For Sidebar Toggle */
+import { Settings } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
+import { sidebarTabs } from "../../constants";
+import { SettingsTab } from "../sidebar/sidebar/tabs";
+import { Sidebar, Tooltip } from "../../components";
 
 interface CodeEditorProps {
   language: string;
   code: string;
   onChanged: (val: string | undefined) => void;
   langLabel: string;
-}
+} 
 
 export const editorRefArray: Array<MutableRefObject<any>> = [];
 
@@ -67,25 +74,38 @@ export function CodeEditor(props: CodeEditorProps) {
     editorRefArray.push(editorRef.current);
   };
 
-  /**
-  *  const handleEditorDidMount = (editor: any, monaco: Monaco) => {
-    emmetHTML(monaco);
-    emmetCSS(monaco);
-    emmetJSX(monaco);
-
-    editorRef.current = editor;
-    editorRefArray.push(editorRef.current);
-  };
-  */
 
   const handleChange = (value: string | undefined) => {
     onChanged(value);
+  };
+
+  const { t } = useTranslation();
+
+  const [activeTab, setActiveTab] = React.useState("");
+
+  const toggleTab = (tabName: string): void => {
+    if (activeTab === tabName) {
+      setActiveTab("");
+    } else {
+      setActiveTab(tabName);
+    }
   };
 
   return (
     <EditorWrapper>
       <EditorHeader>
         <EditorLang>{langLabel}</EditorLang>
+        <HeaderGroup>
+        <Sidebar.MenuItem
+          isActive={activeTab === sidebarTabs.settings}
+          onClick={() => toggleTab(sidebarTabs.settings)}
+        >
+          <Tooltip title={t("tooltips.sidebar.settings")}>
+            <Settings style={{ fontSize: 22 }} />
+          </Tooltip>
+        </Sidebar.MenuItem>
+        <SettingsTab isActive={activeTab === sidebarTabs.settings} />
+        </HeaderGroup>
       </EditorHeader>
       <Editor
         language={language}
@@ -93,7 +113,6 @@ export function CodeEditor(props: CodeEditorProps) {
         onChange={handleChange}
         beforeMount={handleEditorWillMount}
         onMount={handleEditorDidMount}
-        theme={"vs-dark"}
       />
     </EditorWrapper>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import "normalize.css";
+import "./styles.css";
 import { I18nextProvider } from "react-i18next";
 
 import store from "./store/store";

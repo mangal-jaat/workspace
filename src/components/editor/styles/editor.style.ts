@@ -16,6 +16,12 @@ export const EditorHeader = styled.div`
   padding: 5px 10px;
 `;
 
+export const HeaderGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const EditorLang = styled.p`
   text-transform: uppercase;
 `;

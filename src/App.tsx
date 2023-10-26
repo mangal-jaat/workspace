@@ -6,6 +6,7 @@ import {
 import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "./global-style";
+import LocalFontsStyle from "./assets/fonts/font.style";
 import { getDesignTokens, settings, themeDark, themeLight } from "./constants";
 import { useTypedSelector } from "./hooks";
 import { Project } from "./pages";
@@ -26,6 +27,7 @@ export default function App() {
         }
       >
         <GlobalStyle />
+        <LocalFontsStyle/>
         <Project />
       </ThemeProvider>
     </ThemeProviderMUI>

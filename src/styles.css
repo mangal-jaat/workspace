@@ -2,3 +2,31 @@
   font-family: sans-serif;
   text-align: center;
 }
+h1{
+  font-family: 'Fredoka' !important;
+}
+button{
+  font-family: 'Antipasto' !important;
+}
+.monaco-editor{
+  font-family: 'Ligconsolata' !important;
+}
+.codicon-folding-expanded:before,
+.codicon-folding-collapsed:before {
+    content: '' !important;
+}
+.codicon-folding-expanded{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTUgMTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE1IDE1OyI+DQo8cGF0aCBzdHlsZT0iZmlsbDojNUE1QTVBIiBkPSJNMTEsNHY3SDRWNEgxMSBNMTIsM0gzdjloOVYzTDEyLDN6Ii8+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojQzVDNUM1O3N0cm9rZS1taXRlcmxpbWl0OjEwIiB4MT0iMTAiIHkxPSI3LjUiIHgyPSI1IiB5Mj0iNy41Ii8+DQo8L3N2Zz4=);
+}
+.codicon-folding-collapsed{
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTUgMTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE1IDE1OyI+DQo8cmVjdCB4PSIzIiB5PSIzIiBzdHlsZT0ib3BhY2l0eTowLjE7ZmlsbDojRkZGRkZGIiB3aWR0aD0iOSIgaGVpZ2h0PSI5Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojNUE1QTVBIiBkPSJNMTEsNHY3SDRWNEgxMSBNMTIsM0gzdjloOVYzTDEyLDN6Ii8+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojQzVDNUM1O3N0cm9rZS1taXRlcmxpbWl0OjEwIiB4MT0iMTAiIHkxPSI3LjUiIHgyPSI1IiB5Mj0iNy41Ii8+DQo8bGluZSBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojQzVDNUM1O3N0cm9rZS1taXRlcmxpbWl0OjEwIiB4MT0iNy41IiB5MT0iNSIgeDI9IjcuNSIgeTI9IjEwIi8+DQo8L3N2Zz4=);
+}
+.monaco-editor .margin-view-overlays .line-numbers {
+    cursor: -webkit-image-set(url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIyNSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxNSAyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTUgMjU7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwIiBwb2ludHM9IjE0LjUsMS4yIDEuOSwxMy44IDcsMTMuOCAzLjIsMjEuNSA2LjMsMjIuNSAxMC4xLDE0LjkgMTQuNSwxOCIvPjwvc3ZnPg==) 1x,url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCAzMCA1MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAgNTA7Ij48cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyOyIgcG9pbnRzPSIyOSwyLjQgMy44LDI3LjYgMTQsMjcuNiA2LjQsNDMgMTIuNiw0NSAyMC4yLDI5LjggMjksMzYiLz48L3N2Zz4K) 2x) 30 0,default !important;
+    font-family: MonoLisa, Menlo, Monaco, "Courier New", monospace;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
